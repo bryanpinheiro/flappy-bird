@@ -1,18 +1,31 @@
 [gd_scene format=3 uid="uid://b26jsb3io38px"]
 
 [ext_resource type="PackedScene" uid="uid://dsbo668u45bio" path="res://scene/player.tscn" id="1_itxqv"]
+[ext_resource type="Script" uid="uid://b7a32kchquasl" path="res://scene/main.gd" id="1_wp4xf"]
 [ext_resource type="Script" uid="uid://bdf0m52kjh6vk" path="res://script/spawner.gd" id="2_v0l8b"]
 
 [node name="Main" type="Node2D" unique_id=176879893]
+script = ExtResource("1_wp4xf")
 
 [node name="Player" parent="." unique_id=675860985 instance=ExtResource("1_itxqv")]
 position = Vector2(90, 329)
 
 [node name="Spawner" type="Marker2D" parent="." unique_id=1636085162]
-position = Vector2(1282, 297)
+position = Vector2(1162, 320)
 script = ExtResource("2_v0l8b")
 
 [node name="Timer" type="Timer" parent="Spawner" unique_id=1185977630]
 autostart = true
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=259716043]
+
+[node name="ScoreLabel" type="RichTextLabel" parent="HUD" unique_id=2112862385]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[rainbow]BUG"
+fit_content = true
+autowrap_mode = 0
 
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
