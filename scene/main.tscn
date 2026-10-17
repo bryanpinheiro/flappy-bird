@@ -9,6 +9,7 @@ script = ExtResource("1_wp4xf")
 
 [node name="Player" parent="." unique_id=675860985 instance=ExtResource("1_itxqv")]
 position = Vector2(90, 329)
+collision_mask = 6
 
 [node name="Spawner" type="Marker2D" parent="." unique_id=1636085162]
 position = Vector2(1162, 320)
@@ -27,5 +28,7 @@ bbcode_enabled = true
 text = "[rainbow]BUG"
 fit_content = true
 autowrap_mode = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=302809236]
 
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]

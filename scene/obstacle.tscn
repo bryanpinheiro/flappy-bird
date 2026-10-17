@@ -10,6 +10,7 @@ size = Vector2(118, 453)
 size = Vector2(117, 361)
 
 [node name="Obstacle" type="StaticBody2D" unique_id=432466049]
+collision_layer = 4
 script = ExtResource("1_nyukl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1716698709]
@@ -31,6 +32,7 @@ scale = Vector2(0.8984375, 3.546875)
 texture = ExtResource("1_p1pd2")
 
 [node name="ScoreArea" type="Area2D" parent="." unique_id=1897321108]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreArea" unique_id=1053032306]
 position = Vector2(1.5, -0.5)

@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://d2c18gsb3drbl"]
+
+[ext_resource type="FontFile" uid="uid://nupuldvp5wgx" path="res://asset/font/Atma-Bold.ttf" id="1_hxu56"]
+[ext_resource type="FontFile" uid="uid://cxk4don1jllds" path="res://asset/font/MPLUS1Code.ttf" id="2_2fwvj"]
+[ext_resource type="Script" uid="uid://jc7soy4n0i6n" path="res://script/main_menu.gd" id="3_2fwvj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4svf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.9607843, 0.2627451, 0.77254903, 1)
+skew = Vector2(0.5, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9607843, 0.2627451, 0.77254903, 1)
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwbck"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.9616224, 0.26161492, 0.7741694, 1)
+skew = Vector2(0.5, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3er1b"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.6499856, 0.035554666, 0.5106839, 1)
+skew = Vector2(0.5, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9607843, 0.2627451, 0.77254903, 1)
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="Theme" id="Theme_bwkyw"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/fonts/font = ExtResource("1_hxu56")
+Button/styles/hover = SubResource("StyleBoxFlat_m4svf")
+Button/styles/normal = SubResource("StyleBoxFlat_fwbck")
+Button/styles/pressed = SubResource("StyleBoxFlat_3er1b")
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/fonts/bold_font = ExtResource("2_2fwvj")
+RichTextLabel/fonts/bold_italics_font = ExtResource("2_2fwvj")
+RichTextLabel/fonts/italics_font = ExtResource("2_2fwvj")
+RichTextLabel/fonts/mono_font = ExtResource("2_2fwvj")
+RichTextLabel/fonts/normal_font = ExtResource("2_2fwvj")
+
+[sub_resource type="Gradient" id="Gradient_m4svf"]
+colors = PackedColorArray(0.37254903, 0.17254902, 0.9098039, 1, 0.9372549, 0.9529412, 0.9098039, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ajdik"]
+gradient = SubResource("Gradient_m4svf")
+fill = 1
+fill_from = Vector2(0.49130434, 0.5217391)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ajdik"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(640, 400, 0)
+emission_shape = 3
+emission_box_extents = Vector3(640, 400, 1)
+gravity = Vector3(0, 98, 0)
+scale_max = 2.0
+
+[node name="MainMenu" type="Control" unique_id=988392059]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_bwkyw")
+script = ExtResource("3_2fwvj")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1269497609]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ajdik")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=149538367]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -33.0
+offset_right = 43.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=554526789]
+layout_mode = 2
+text = "Jogar"
+
+[node name="Fullscreen" type="Button" parent="VBoxContainer" unique_id=789273252]
+layout_mode = 2
+text = "Tela cheia"
+
+[node name="GameTitleLabel" type="RichTextLabel" parent="." unique_id=259480892]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.5
+offset_top = -184.0
+offset_right = 192.5
+offset_bottom = -97.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[wave]Flappy Bird"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreatorLabel" type="RichTextLabel" parent="." unique_id=715490674]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -163.0
+offset_top = -63.0
+offset_right = 163.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "Criado por: Bryan Pinheiro"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1617745984]
+amount = 256
+process_material = SubResource("ParticleProcessMaterial_ajdik")
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Fullscreen" to="." method="_on_fullscreen_pressed"]
