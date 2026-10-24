@@ -1,15 +1,29 @@
 extends CharacterBody2D
 
+signal died
+
+var alive: bool = true
 
 func _physics_process(delta):
 	velocity.y += get_gravity().y * 0.05
-	if Input.is_action_just_pressed("jump"):
-		velocity.y = -1000	* 0.6
+	
+	#player can jump because he is alive.
+	if alive == true:
+		if Input.is_action_just_pressed("jump"):
+			velocity.y = -1000	* 0.6
+			
 	move_and_slide()
 	
+	#player collided
 	if get_last_slide_collision() != null:
-		get_tree().reload_current_scene() # TODO: trocar por tela de game over
+		game_over()
 
 
 func _on_screen_exited():
-	get_tree().reload_current_scene()
+	game_over()
+
+
+func game_over() -> void:
+	if alive == true:
+		died.emit()
+	alive = false

@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://b1cdtfldftnby"]
+
+[ext_resource type="Script" uid="uid://cq7v1ia15mn40" path="res://script/game_over_screen.gd" id="1_c0347"]
+[ext_resource type="Theme" uid="uid://dabna7wo81jt5" path="res://resources/bryan_theme_00.tres" id="1_qhku3"]
+
+[node name="GameOverScreen" type="Control" unique_id=1408744853]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qhku3")
+script = ExtResource("1_c0347")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2067855786]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -40.0
+offset_right = 115.5
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1386658064]
+layout_mode = 2
+
+[node name="GameOverTitle" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=1051375706]
+layout_mode = 2
+bbcode_enabled = true
+text = "Game Over"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=1783712946]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=863789520]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+
+[node name="Restart" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=485227688]
+layout_mode = 2
+text = "Reiniciar"
+
+[node name="Menu" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=674738415]
+layout_mode = 2
+text = "Menu"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Menu" to="." method="_on_menu_pressed"]

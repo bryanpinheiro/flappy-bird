@@ -1,68 +1,7 @@
 [gd_scene format=3 uid="uid://d2c18gsb3drbl"]
 
-[ext_resource type="FontFile" uid="uid://nupuldvp5wgx" path="res://asset/font/Atma-Bold.ttf" id="1_hxu56"]
-[ext_resource type="FontFile" uid="uid://cxk4don1jllds" path="res://asset/font/MPLUS1Code.ttf" id="2_2fwvj"]
+[ext_resource type="Theme" uid="uid://dabna7wo81jt5" path="res://resources/bryan_theme_00.tres" id="1_hxu56"]
 [ext_resource type="Script" uid="uid://jc7soy4n0i6n" path="res://script/main_menu.gd" id="3_2fwvj"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4svf"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.9607843, 0.2627451, 0.77254903, 1)
-skew = Vector2(0.5, 0)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.9607843, 0.2627451, 0.77254903, 1)
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwbck"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.9616224, 0.26161492, 0.7741694, 1)
-skew = Vector2(0.5, 0)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3er1b"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.6499856, 0.035554666, 0.5106839, 1)
-skew = Vector2(0.5, 0)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.9607843, 0.2627451, 0.77254903, 1)
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-
-[sub_resource type="Theme" id="Theme_bwkyw"]
-Button/colors/font_color = Color(1, 1, 1, 1)
-Button/colors/font_hover_color = Color(1, 1, 1, 1)
-Button/colors/font_pressed_color = Color(1, 1, 1, 1)
-Button/fonts/font = ExtResource("1_hxu56")
-Button/styles/hover = SubResource("StyleBoxFlat_m4svf")
-Button/styles/normal = SubResource("StyleBoxFlat_fwbck")
-Button/styles/pressed = SubResource("StyleBoxFlat_3er1b")
-RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
-RichTextLabel/fonts/bold_font = ExtResource("2_2fwvj")
-RichTextLabel/fonts/bold_italics_font = ExtResource("2_2fwvj")
-RichTextLabel/fonts/italics_font = ExtResource("2_2fwvj")
-RichTextLabel/fonts/mono_font = ExtResource("2_2fwvj")
-RichTextLabel/fonts/normal_font = ExtResource("2_2fwvj")
 
 [sub_resource type="Gradient" id="Gradient_m4svf"]
 colors = PackedColorArray(0.37254903, 0.17254902, 0.9098039, 1, 0.9372549, 0.9529412, 0.9098039, 1)
@@ -87,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_bwkyw")
+theme = ExtResource("1_hxu56")
 script = ExtResource("3_2fwvj")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1269497609]
