@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dsbo668u45bio" path="res://scene/player.tscn" id="1_itxqv"]
 [ext_resource type="Script" uid="uid://b7a32kchquasl" path="res://scene/main.gd" id="1_wp4xf"]
 [ext_resource type="Script" uid="uid://bdf0m52kjh6vk" path="res://script/spawner.gd" id="2_v0l8b"]
+[ext_resource type="AudioStream" uid="uid://b3hunq7voqk0y" path="res://asset/driving_soundtrack.mp3" id="4_brvut"]
 
 [node name="Main" type="Node2D" unique_id=176879893]
 script = ExtResource("1_wp4xf")
@@ -29,6 +30,9 @@ text = "[rainbow]BUG"
 fit_content = true
 autowrap_mode = 0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=302809236]
+[node name="SoundtrackPlayer" type="AudioStreamPlayer" parent="." unique_id=302809236]
+stream = ExtResource("4_brvut")
+autoplay = true
+parameters/looping = true
 
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]

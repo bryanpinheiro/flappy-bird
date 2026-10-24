@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7ridpcoxe1lw"
-path="res://.godot/imported/gradient-radial.png-7c3db73fe5e3df2a4a863a9d0611c299.ctex"
+uid="uid://c1h36qk72hc2"
+path="res://.godot/imported/bird2.png-a2120cac35c94f1119ce6b7504d80f5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/gradient-radial.png"
-dest_files=["res://.godot/imported/gradient-radial.png-7c3db73fe5e3df2a4a863a9d0611c299.ctex"]
+source_file="res://asset/bird2.png"
+dest_files=["res://.godot/imported/bird2.png-a2120cac35c94f1119ce6b7504d80f5e.ctex"]
 
 [params]
 
