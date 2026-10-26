@@ -1,41 +1,107 @@
 [gd_scene format=3 uid="uid://mtkiq18r1rew"]
 
 [ext_resource type="Script" uid="uid://c4rccg6aqxcw0" path="res://script/obstacle.gd" id="1_nyukl"]
-[ext_resource type="Texture2D" uid="uid://cwt6iq5aosd4l" path="res://icon.svg" id="1_p1pd2"]
+[ext_resource type="Texture2D" uid="uid://bpdegpbdhrv3g" path="res://asset/pipa-spritesheet.png" id="2_nyukl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajdik"]
-size = Vector2(118, 453)
+size = Vector2(64, 192)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bwkyw"]
-size = Vector2(117, 361)
+size = Vector2(64, 105)
+
+[sub_resource type="Animation" id="Animation_nyukl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D2/PipaUp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D/PipaDown:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_25435"]
+resource_name = "pipa_anim"
+length = 0.39999999999999997
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D2/PipaUp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.30065542),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D/PipaDown:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.30065542),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xcrw2"]
+_data = {
+&"RESET": SubResource("Animation_nyukl"),
+&"pipa_anim": SubResource("Animation_25435")
+}
 
 [node name="Obstacle" type="StaticBody2D" unique_id=432466049]
 collision_layer = 4
 script = ExtResource("1_nyukl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1716698709]
-position = Vector2(2, 420)
+position = Vector2(0, 154)
 shape = SubResource("RectangleShape2D_ajdik")
 
-[node name="Icon" type="Sprite2D" parent="CollisionShape2D" unique_id=2053042710]
-position = Vector2(0.49999523, 0)
-scale = Vector2(0.9140625, 3.546875)
-texture = ExtResource("1_p1pd2")
+[node name="PipaDown" type="Sprite2D" parent="CollisionShape2D" unique_id=718013523]
+position = Vector2(0, -1)
+texture = ExtResource("2_nyukl")
+hframes = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1131308575]
-position = Vector2(1, -420)
+position = Vector2(0, -157)
 shape = SubResource("RectangleShape2D_ajdik")
 
-[node name="Icon" type="Sprite2D" parent="CollisionShape2D2" unique_id=1607037501]
-position = Vector2(-0.500002, 0)
-scale = Vector2(0.8984375, 3.546875)
-texture = ExtResource("1_p1pd2")
+[node name="PipaUp" type="Sprite2D" parent="CollisionShape2D2" unique_id=350570378]
+position = Vector2(0, 0.25)
+rotation = 3.1415927
+texture = ExtResource("2_nyukl")
+hframes = 2
 
 [node name="ScoreArea" type="Area2D" parent="." unique_id=1897321108]
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreArea" unique_id=1053032306]
-position = Vector2(1.5, -0.5)
+position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_bwkyw")
+
+[node name="PipaPlayer" type="AnimationPlayer" parent="." unique_id=108734275]
+libraries/ = SubResource("AnimationLibrary_xcrw2")
 
 [connection signal="body_entered" from="ScoreArea" to="." method="_on_score_area_body_entered"]
