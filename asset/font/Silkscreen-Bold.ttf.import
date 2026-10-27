@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cp8qsr2i2eae0"
-path="res://.godot/imported/Atma-Medium.ttf-65c85c19648dda508a466643c6c77c02.fontdata"
+uid="uid://dp0jvgbf0a1cu"
+path="res://.godot/imported/Silkscreen-Bold.ttf-4d2a53fd560215bec58e679653672b61.fontdata"
 
 [deps]
 
-source_file="res://asset/font/Atma-Medium.ttf"
-dest_files=["res://.godot/imported/Atma-Medium.ttf-65c85c19648dda508a466643c6c77c02.fontdata"]
+source_file="res://asset/font/Silkscreen-Bold.ttf"
+dest_files=["res://.godot/imported/Silkscreen-Bold.ttf-4d2a53fd560215bec58e679653672b61.fontdata"]
 
 [params]
 

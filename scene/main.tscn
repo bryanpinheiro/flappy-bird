@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://b7a32kchquasl" path="res://scene/main.gd" id="1_wp4xf"]
 [ext_resource type="Script" uid="uid://bdf0m52kjh6vk" path="res://script/spawner.gd" id="2_v0l8b"]
 [ext_resource type="PackedScene" uid="uid://b1cdtfldftnby" path="res://scene/game_over_screen.tscn" id="4_0ha60"]
-[ext_resource type="AudioStream" uid="uid://b3hunq7voqk0y" path="res://asset/driving_soundtrack.mp3" id="4_brvut"]
 [ext_resource type="Texture2D" uid="uid://ctj0jxex5rk66" path="res://asset/background-spritesheet.png" id="6_4j5ol"]
+[ext_resource type="AudioStream" uid="uid://coransni5odpr" path="res://asset/wave-sounds.mp3" id="6_p1hux"]
 
 [sub_resource type="Animation" id="Animation_4j5ol"]
 length = 0.001
@@ -80,7 +80,7 @@ autowrap_mode = 0
 [node name="GameOverScreen" parent="HUD" unique_id=1408744853 instance=ExtResource("4_0ha60")]
 
 [node name="SoundtrackPlayer" type="AudioStreamPlayer" parent="." unique_id=302809236]
-stream = ExtResource("4_brvut")
+stream = ExtResource("6_p1hux")
 autoplay = true
 parameters/looping = true
 

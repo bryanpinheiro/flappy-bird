@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cxk4don1jllds"
-path="res://.godot/imported/MPLUS1Code.ttf-92b58d62d8f18fda080fd092eb890bab.fontdata"
+uid="uid://brubi2c3a5taj"
+path="res://.godot/imported/Silkscreen-Regular.ttf-104346c2939e6408fd947fefb742acac.fontdata"
 
 [deps]
 
-source_file="res://asset/font/MPLUS1Code.ttf"
-dest_files=["res://.godot/imported/MPLUS1Code.ttf-92b58d62d8f18fda080fd092eb890bab.fontdata"]
+source_file="res://asset/font/Silkscreen-Regular.ttf"
+dest_files=["res://.godot/imported/Silkscreen-Regular.ttf-104346c2939e6408fd947fefb742acac.fontdata"]
 
 [params]
 

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://capmtruf6ukql"
-path="res://.godot/imported/Atma-Regular.ttf-dccbe4fa16147b438784cb35e8d2f8e4.fontdata"
+uid="uid://ddvy1e5bb0nja"
+path="res://.godot/imported/PixelifySans.ttf-2410459e191f704de544dd4742094b1f.fontdata"
 
 [deps]
 
-source_file="res://asset/font/Atma-Regular.ttf"
-dest_files=["res://.godot/imported/Atma-Regular.ttf-dccbe4fa16147b438784cb35e8d2f8e4.fontdata"]
+source_file="res://asset/font/PixelifySans.ttf"
+dest_files=["res://.godot/imported/PixelifySans.ttf-2410459e191f704de544dd4742094b1f.fontdata"]
 
 [params]
 
