@@ -1,6 +1,7 @@
 extends Control
 
 @onready var stats: RichTextLabel = %Stats
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 func _ready() -> void:
 	hide()
@@ -18,3 +19,11 @@ func _on_menu_pressed() -> void:
 func _on_game_finished(score: int, max_score: int) -> void:
 	stats.text = str("Pontuação: ", score, "\nRecorde: ", max_score)
 	show()
+
+
+func _on_restart_mouse_entered() -> void:
+	audio_stream_player.play()
+
+
+func _on_menu_mouse_entered() -> void:
+	audio_stream_player.play()

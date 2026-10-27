@@ -3,9 +3,14 @@
 [ext_resource type="Theme" uid="uid://dabna7wo81jt5" path="res://resources/bryan_theme_00.tres" id="1_hxu56"]
 [ext_resource type="FastNoiseLite" uid="uid://gobxij2gxp2b" path="res://resources/noise_lite.tres" id="3_0iwki"]
 [ext_resource type="Script" uid="uid://jc7soy4n0i6n" path="res://script/main_menu.gd" id="3_2fwvj"]
+[ext_resource type="AudioStream" uid="uid://qywugbtnww8t" path="res://asset/button.wav" id="4_0iwki"]
+
+[sub_resource type="Gradient" id="Gradient_jsx4g"]
+offsets = PackedFloat32Array(0.23287672, 1)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2fwvj"]
 noise = ExtResource("3_0iwki")
+color_ramp = SubResource("Gradient_jsx4g")
 seamless = true
 seamless_blend_skirt = 1.0
 bump_strength = 32.0
@@ -109,5 +114,10 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=633811467]
+stream = ExtResource("4_0iwki")
+
+[connection signal="mouse_entered" from="VBoxContainer/Play" to="." method="_on_play_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/Fullscreen" to="." method="_on_fullscreen_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Fullscreen" to="." method="_on_fullscreen_pressed"]

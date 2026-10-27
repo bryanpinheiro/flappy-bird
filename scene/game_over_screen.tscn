@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq7v1ia15mn40" path="res://script/game_over_screen.gd" id="1_c0347"]
 [ext_resource type="Theme" uid="uid://dabna7wo81jt5" path="res://resources/bryan_theme_00.tres" id="1_qhku3"]
+[ext_resource type="AudioStream" uid="uid://qywugbtnww8t" path="res://asset/button.wav" id="3_3ugjq"]
 
 [sub_resource type="Theme" id="Theme_of57s"]
 
@@ -66,5 +67,10 @@ text = " Reiniciar "
 layout_mode = 2
 text = " Menu "
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1908934187]
+stream = ExtResource("3_3ugjq")
+
+[connection signal="mouse_entered" from="PanelContainer/VBoxContainer/HBoxContainer/Restart" to="." method="_on_restart_mouse_entered"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="mouse_entered" from="PanelContainer/VBoxContainer/HBoxContainer/Menu" to="." method="_on_menu_mouse_entered"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Menu" to="." method="_on_menu_pressed"]
