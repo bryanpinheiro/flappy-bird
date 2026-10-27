@@ -28,6 +28,13 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5f6u"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.11858138, 0.11858139, 0.11858132, 1)
+
 [resource]
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
@@ -36,6 +43,7 @@ Button/fonts/font = ExtResource("1_aw6km")
 Button/styles/hover = SubResource("StyleBoxFlat_aw6km")
 Button/styles/normal = SubResource("StyleBoxFlat_vfg22")
 Button/styles/pressed = SubResource("StyleBoxFlat_sam4a")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_b5f6u")
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
 RichTextLabel/fonts/bold_font = ExtResource("1_1omew")
 RichTextLabel/fonts/bold_italics_font = ExtResource("2_aw6km")

@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cq7v1ia15mn40" path="res://script/game_over_screen.gd" id="1_c0347"]
 [ext_resource type="Theme" uid="uid://dabna7wo81jt5" path="res://resources/bryan_theme_00.tres" id="1_qhku3"]
 
+[sub_resource type="Theme" id="Theme_of57s"]
+
 [node name="GameOverScreen" type="Control" unique_id=1408744853]
 layout_mode = 3
 anchors_preset = 8
@@ -28,6 +30,7 @@ offset_right = 115.5
 offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_of57s")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1386658064]
 layout_mode = 2
@@ -57,11 +60,11 @@ theme_override_constants/separation = 30
 
 [node name="Restart" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=485227688]
 layout_mode = 2
-text = "Reiniciar"
+text = " Reiniciar "
 
 [node name="Menu" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=674738415]
 layout_mode = 2
-text = "Menu"
+text = " Menu "
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/Menu" to="." method="_on_menu_pressed"]
