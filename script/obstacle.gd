@@ -6,7 +6,10 @@ extends StaticBody2D
 const OBSTACLE = preload("uid://mtkiq18r1rew")
 
 func _ready() -> void:
-	EventBus.game_finished.connect(func(a,b): speed = 0)
+	EventBus.game_finished.connect(func(a,b): 
+		speed = 0
+		pipa_player.pause()
+	)
 	pipa_player.play("pipa_anim")
 
 func _physics_process(delta):

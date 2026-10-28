@@ -15,6 +15,7 @@ func _physics_process(delta):
 	#player can jump because he is alive.
 	if alive == true:
 		if Input.is_action_just_pressed("jump"):
+			EventBus.audio_player_jumped.emit()
 			velocity.y = -1000	* 0.6
 			animation_player.play("fly_up")
 			
@@ -34,6 +35,7 @@ func _on_screen_exited():
 
 func game_over() -> void:
 	if alive == true:
+		EventBus.audio_player_collided.emit()
 		animated_sprite.pause()
 		animation_player.stop()
 		died.emit()

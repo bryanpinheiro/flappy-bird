@@ -38,7 +38,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_25435"]
 resource_name = "pipa_anim"
-length = 0.39999999999999997
+length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false

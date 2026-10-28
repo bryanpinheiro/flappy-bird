@@ -1,7 +1,5 @@
 extends Control
 
-@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
-
 func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://scene/main.tscn")
 
@@ -12,8 +10,8 @@ func _on_fullscreen_pressed() -> void:
 
 
 func _on_play_mouse_entered() -> void:
-	audio_stream_player.play()
+	EventBus.audio_button_hovered.emit()
 
 
 func _on_fullscreen_mouse_entered() -> void:
-	audio_stream_player.play()
+	EventBus.audio_button_hovered.emit()
